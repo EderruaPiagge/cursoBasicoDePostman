@@ -1,5 +1,5 @@
 # Curso Básico de Postman - Fatec Araraquara
-Materiais para o curso de Postman em 1 hora
+Materiais para o curso de Postman 
 
 
 # Simple Books API #
