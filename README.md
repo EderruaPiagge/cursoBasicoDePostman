@@ -28,14 +28,14 @@ Query parameters opcionais:
 - limit: número entre 1 e 20
 
 
-### Consulta Livro ###
+### Consultar 1 Livro ###
 
 GET `/books/:bookId`
 
 Retorna informações sobre um livro em específico
 
 
-### Reservar um livro ###
+### Criar Reservas ###
 
 POST `/orders`
 
@@ -59,19 +59,19 @@ Authorization: Bearer <TOKEN>
 
 A resposta conterá o token de acesso
 
-### Retorna todas as reservas ###
+### Lista de Reservas ###
 
 GET `/orders`
 
 Permite visualizar todas as reservas. Requer autenticação.
 
-### Retorna reserva ###
+### Consulta 1 reserva ###
 
 GET `/orders/:orderId`
 
 Permite visualizar uma reserva em específico. Requer autenticação.
 
-### Atualiza reserva ###
+### Atualiza Reserva ###
 
 PATCH `/orders/:orderId`
 
@@ -91,7 +91,7 @@ Authorization: Bearer <YOUR TOKEN>
 }
 ```
 
-### Exclui reserva ###
+### Remover Reserva ###
 
 DELETE `/orders/:orderId`
 
@@ -105,7 +105,7 @@ DELETE /orders/PF6MflPDcuhWobZcgmJy5
 Authorization: Bearer <YOUR TOKEN>
 ```
 
-## Autenticação ##
+## Criar Access Token ##
 
 Para lidar com reservas, você precisará criar uma token de acesso.
 
