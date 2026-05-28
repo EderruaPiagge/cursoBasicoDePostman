@@ -1,4 +1,4 @@
-# postman-em-1-hora
+# Curso Básico de Postman - Fatec Araraquara
 Materiais para o curso de Postman em 1 hora
 
 
