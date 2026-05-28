@@ -27,7 +27,6 @@ Query parameters opcionais:
 - type: fiction ou non-fiction
 - limit: número entre 1 e 20
 
-
 ### Consultar 1 Livro ###
 
 GET `/books/:bookId`
@@ -126,3 +125,26 @@ O request body tem que estar em formato JSON e ter as seguintes propriedades:
  ```
 
 A resposta conterá o token de acesso.
+
+## Testes de API ##
+
+### Consultar 1 Livro ###
+pm.test("verifica se Type é ficton ou non-fiction", function(){
+    const responseJason = pm.response.json()
+    pm.expect(responseJason.type).to.be.oneOf(["fiction", "non-fiction"])
+});
+
+### Lista de Livros ###
+pm.test("verifica se o tempo de resposta é menor que 200ms", function(){
+    pm.expect(pm.response.responseTime).to.be.below(200)
+});
+
+### Status ###
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Status retornou o texto OK", function () {
+    const responseJason = pm.response.json();
+    pm.expect(responseJason.status).to.eql("OK");
+});
